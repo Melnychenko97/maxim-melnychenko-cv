@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CV Melnychenko</title>
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-400">
+	<section class="container w-full mx-auto shadow-2xl bg-white">
+		<nav class="shadow-xl justify-between flex md:justify-center lg:justify-between items-center w-full h-auto bg-blue-700 fixed top-0 left-0 z-50">
+			<h3 class="md:hidden sm:block lg:block font-sans text-white text-2xl h-full pl-3 xl:px-10 flex items-center justify-center">
+				Maxym Melnychenko
+			</h3>
+
+			<button id="hamburger" class="md:hidden p-2 px-5 text-black">
+				<img class="h-10 w-10 text-white" src="assets/icons/menu.svg" alt="open menu">
+			</button>
+
+			<ul id="mob-menu" class="hidden md:flex bg-gray-100 md:bg-blue-700 w-full md:w-auto flex-col md:flex-row fixed md:static top-0 right-0 md:justify-end lg:px-3 xl:px-10 h-full md:h-auto">
+				<div class="shadow-lg md:hidden close flex justify-end p-2 bg-blue-200">
+					<button type="button" id="close-menu" class="p-2 px-5 text-white">X</button>
+				</div>
+				<li class="border-gray-400 border-solid border-b-2 md:border-none bg-white md:bg-transparent flex items-center justify-center">
+					<a id="home" class="md:text-white w-full md:w-auto py-5 px-5 md:px-3 xl:p-5 lg:hover:bg-blue-800" href="">General Info</a>
+				</li>
+				<li class="border-gray-400 border-solid border-b-2 md:border-none bg-white md:bg-transparent flex items-center justify-center">
+					<a id="education" class="md:text-white w-full md:w-auto py-5 px-5 md:px-3 xl:p-5 lg:hover:bg-blue-800" href="">Education</a>
+				</li>
+				<li class="border-gray-400 border-solid border-b-2 md:border-none bg-white md:bg-transparent flex items-center justify-center">
+					<a id="experience" class="md:text-white w-full md:w-auto py-5 px-5 md:px-3 xl:p-5 lg:hover:bg-blue-800" href="">Experience</a>
+				</li>
+				<li class="border-gray-400 border-solid border-b-2 md:border-none bg-white md:bg-transparent flex items-center justify-center">
+					<a id="profskills" class="md:text-white w-full md:w-auto py-5 px-5 md:px-3 xl:p-5 lg:hover:bg-blue-800" href="">Professional Skills</a>
+				</li>
+				<li class="border-gray-400 border-solid border-b-2 md:border-none bg-white md:bg-transparent flex items-center justify-center">
+					<a id="addinfo" class="md:text-white w-full md:w-auto py-5 px-5 md:px-3 xl:p-5 lg:hover:bg-blue-800" href="">Additional Info</a>
+				</li>
+				<li class="border-gray-400 border-solid bg-white md:border-none md:bg-transparent flex items-center justify-center shadow-xl md:shadow-none">
+					<a id="credentials" class="md:text-white w-full md:w-auto py-5 px-5 md:px-3 xl:p-5 lg:hover:bg-blue-800" href="">Credentials</a>
+				</li>
+			</ul></nav>
+			<div id="app">
+				<section class="h-auto bg-fixed bg-center relative"
+		style="background-image: url('./assets/industrial.webp'); height: 25rem; min-height: 600px;">
+
+			<div class="bg-blue-700 opacity-50 absolute top-0 left-0 h-full w-full z-10"></div>
+
+			<div class="mx-auto md:w-4/5 lg:w-2/3 z-20 relative">
+
+				<div class="bg-white shadow-xl static mt-12 md:mt-0 md:absolute flex w-full flex-wrap max-w-3xl" style="top: 10rem;">
+					<div class="hidden md:block w-full md:w-1/2 bg-cover" style="max-height: 406px; background-image: url('assets/Melnychenko.webp');">
+					</div>
+                    <div class="md:hidden mt-10 mx-5 bg-no-repeat bg-center bg-contain w-full md:w-1/2 bg-cover"  style="min-height: 406px; max-height: 406px; background-image: url('assets/Melnychenko.webp');">
+                    </div>
+					<div class="flex flex-col items-center p-10 w-full md:w-1/2 bg-white h-auto">
+						
+						<h3 class="bg-center bg-fixed font-sans w-full text-2xl flex text-blue-800">
+							Maxim Melnychenko
+						</h3>
+						<h4 class="font-sans w-full text-lg font-bold text-blue-800">
+							Engineer of Civil & Industrial Structures
+						</h4>
+
+						<ul class="mt-8 w-full">
+							<li class="mb-5 flex flex-col">
+								<span class="text-lg text-blue-800 font-bold">Contact Phone:</span>
+								<span class="text-sm text-blue-800">+38 050 500 85 38</span>
+							</li>
+							<li class="mb-5 flex flex-col">
+								<span class="text-lg text-blue-800 font-bold">Email:</span>
+								<span class="text-sm text-blue-800">max74.mel74@gmail.com</span>
+							</li>
+
+							<li class="mb-5 flex flex-col">
+								<span class="text-lg text-blue-800 font-bold">Date of Birth: </span>
+								<span class="text-sm text-blue-800">February 2, 1974</span>
+							</li>
+						</ul>
+
+					</div>
+					<div class="w-full bg-blue-700">
+						<ul class="w-full h-full flex justify-center items-center">
+							<li class="mr-10">
+								<a target="_blanket" class="p-5" href="https://www.facebook.com/profile.php?id=100008318206623">
+									<img class="bg-transparent text-white text-white-100 h-6 w-6" src="assets/icons/facebook-logo.svg" alt="facebook profile">
+								</a>
+							</li>
+							<li>
+								<a target="_blanket" class="p-5" href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-71b97b151/">
+								<img class="bg-transparent text-white h-6 w-6" src="assets/icons/linkedin-logo.svg" alt="linkedin profile">	
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="container w-full mx-auto bg-white pt-48 mt-48 pb-48 md:mt-0  px-5 md:py-32 md:px-20">
+			<h2 class="font-sans text-3xl h-full px-0 md:px-10 text-center">Hello! My name is Maxim</h2>
+			<p class="mt-8 mx-0 md:mx-20 px-0 md:px-20 lg:px-48 text-center">I'm an engineer of civil and industrial structures. Here is a brief information of my experience, technical skills and other. Please, feel free to walk through my website.</p>
+		</section>
+			</div>
+	</section>
+    <div id="loader" class="hidden bg-white fixed w-screen h-screen z-30 top-0 left-0 flex items-center justify-center">
+        <img src="assets/gear.gif" alt="page is loading now" class="w-64 h-auto">
+    </div>
+	<script src="index.js"></script>
+</body>
+</html>
