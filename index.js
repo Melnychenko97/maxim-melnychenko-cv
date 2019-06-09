@@ -26,6 +26,12 @@ closeMenu.addEventListener('click', (e) => {
     mobMenu.classList.add('hidden');
 });
 
+mobMenu.addEventListener('click', (e) => {
+    e.target.classList.contains('nav__item') ? e.currentTarget.classList.add('hidden') : null;
+})
+
+
+
 const education = document.querySelector('#education');
 const loader = document.querySelector('#loader');
 
@@ -37,11 +43,8 @@ education.addEventListener('click', (e) => {
     fetch('./components/education.html', {
         method: 'GET',
     })
-        .then( resolve => {
-            console.log(resolve);
-            return resolve.text()
-        })
-        .then( result =>  app.innerHTML = result )
+        .then( resolve => resolve.text() )
+        .then( result => app.innerHTML = result )
         .then(() => loader.classList.add('hidden'))
         .catch(err => console.log(err));
 });
