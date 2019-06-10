@@ -1,5 +1,5 @@
 "use strict";
-
+console.log(window.location.pathname);
 if (window.location.pathname === '/') {
     const homeLink = document.querySelector('#home');
     homeLink.classList.add('bg-blue-300');
@@ -27,25 +27,27 @@ closeMenu.addEventListener('click', (e) => {
 });
 
 mobMenu.addEventListener('click', (e) => {
-    e.target.classList.contains('nav__item') ? e.currentTarget.classList.add('hidden') : null;
+    e.preventDefault();
+    if (e.target.classList.contains('nav__item')) {
+        const navItems = document.querySelectorAll('.nav__item');
+        navItems.forEach( (item) => item.classList.remove('bg-blue-300') );
+        e.currentTarget.classList.add('hidden');
+        const name = e.target.getAttribute('id');
+        navigateTo(e.target, name);
+    }
+
 })
 
-
-
-const education = document.querySelector('#education');
-const loader = document.querySelector('#loader');
-
-education.addEventListener('click', (e) => {
-    e.preventDefault();
+const navigateTo = (pageLink, pageName) => {
+    const loader = document.querySelector('#loader');
     loader.classList.remove('hidden');
-
+    pageLink.classList.add('bg-blue-300');
     const app = document.querySelector('#app');
-    fetch('./components/education.html', {
+    fetch(`./components/${ pageName + '' }.html`, {
         method: 'GET',
     })
-        .then( resolve => resolve.text() )
-        .then( result => app.innerHTML = result )
+        .then(resolve => resolve.text())
+        .then(result => app.innerHTML = result)
         .then(() => loader.classList.add('hidden'))
         .catch(err => console.log(err));
-});
-
+}
