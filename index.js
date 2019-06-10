@@ -8,7 +8,6 @@ fetch(`./components/general.html`, {
     .then(result => app.innerHTML = result)
     .then(() => {
         loader.classList.add('hidden');
-        credentials();
     })
     .then(() => {
         const closeMenu = document.querySelector('#close-menu');
