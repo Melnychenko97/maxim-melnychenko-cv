@@ -1,10 +1,4 @@
 "use strict";
-console.log(window.location.pathname);
-if (window.location.pathname === '/') {
-    const homeLink = document.querySelector('#home');
-    homeLink.classList.add('bg-blue-300');
-}
-
 const closeMenu = document.querySelector('#close-menu');
 const mobMenu = document.querySelector('#mob-menu');
 
@@ -38,6 +32,24 @@ mobMenu.addEventListener('click', (e) => {
 
 })
 
+const credentials = () => {
+    const diplomas = document.querySelector('[data-id="diplomas"]');
+    const certificates = document.querySelector('[data-id="certificates"]');
+
+    const openList = (e) => {
+        const id = e.target.getAttribute('data-id');
+        const item = document.querySelector('#' + id);
+        console.log( e.target.children);
+        for ( let i = 0; i < e.target.children.length; i++ ) {
+            e.target.children[i].classList.contains('arrow') ? e.target.children[i].classList.toggle('hidden') : null;
+        }
+        item.classList.toggle('hidden');
+    }
+
+    diplomas.addEventListener('click', openList );
+    certificates.addEventListener('click', openList );
+}
+
 const navigateTo = (pageLink, pageName) => {
     const loader = document.querySelector('#loader');
     loader.classList.remove('hidden');
@@ -48,6 +60,10 @@ const navigateTo = (pageLink, pageName) => {
     })
         .then(resolve => resolve.text())
         .then(result => app.innerHTML = result)
-        .then(() => loader.classList.add('hidden'))
+        .then(() => {
+
+            loader.classList.add('hidden');
+            credentials();
+        })
         .catch(err => console.log(err));
 }
