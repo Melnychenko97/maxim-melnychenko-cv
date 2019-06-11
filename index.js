@@ -50,7 +50,6 @@ fetch(`./components/general.html`, {
             const openList = (e) => {
                 const id = e.target.getAttribute('data-id');
                 const item = document.querySelector('#' + id);
-                console.log( e.target.children);
                 for ( let i = 0; i < e.target.children.length; i++ ) {
                     e.target.children[i].classList.contains('arrow') ? e.target.children[i].classList.toggle('hidden') : null;
                 }
@@ -72,9 +71,14 @@ fetch(`./components/general.html`, {
                 .then(resolve => resolve.text())
                 .then(result => app.innerHTML = result)
                 .then(() => {
-
                     loader.classList.add('hidden');
-                    credentials();
+                    switch (pageName) {
+                        case 'credentials' :
+                            credentials();
+                            break;
+                        default :
+                            null;
+                    }
                 })
                 .catch(err => console.log(err));
         }
