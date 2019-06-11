@@ -1,13 +1,12 @@
 "use strict";
-const loader = document.querySelector('#loader');
-
+const loader = $('#loader');
 fetch(`./components/general.html`, {
     method: 'GET',
 })
     .then(resolve => resolve.text())
     .then(result => app.innerHTML = result)
     .then(() => {
-        setTimeout(() =>  loader.classList.add('hidden'), 1000 );
+        setTimeout(() =>  $(loader).fadeOut(400), 800 );
 
     })
     .then(() => {
@@ -49,12 +48,12 @@ fetch(`./components/general.html`, {
             const certificates = document.querySelector('[data-id="certificates"]');
 
             const openList = (e) => {
-                const id = e.target.getAttribute('data-id');
+                const id = e.currentTarget.getAttribute('data-id');
                 const item = document.querySelector('#' + id);
-                for ( let i = 0; i < e.target.children.length; i++ ) {
-                    e.target.children[i].classList.contains('arrow') ? e.target.children[i].classList.toggle('hidden') : null;
+                for ( let i = 0; i < e.currentTarget.children.length; i++ ) {
+                    e.currentTarget.children[i].classList.contains('arrow') ? e.currentTarget.children[i].classList.toggle('hidden') : null;
                 }
-                item.classList.toggle('hidden');
+                $(item).slideToggle(500);
             }
 
             diplomas.addEventListener('click', openList );
@@ -63,7 +62,7 @@ fetch(`./components/general.html`, {
 
         const navigateTo = (pageLink, pageName) => {
             const loader = document.querySelector('#loader');
-            loader.classList.remove('hidden');
+            $(loader).show();
             pageLink.classList.add('bg-blue-300');
             const app = document.querySelector('#app');
             fetch(`./components/${ pageName + '' }.html`, {
@@ -72,7 +71,7 @@ fetch(`./components/general.html`, {
                 .then(resolve => resolve.text())
                 .then(result => app.innerHTML = result)
                 .then(() => {
-                    setTimeout(() =>  loader.classList.add('hidden'), 1000 );
+                    setTimeout(() =>  $(loader).fadeOut(400), 800 );
                     switch (pageName) {
                         case 'credentials' :
                             credentials();
