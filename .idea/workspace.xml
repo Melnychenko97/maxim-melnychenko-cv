@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49421ab6-835f-4156-9e17-0eae5114368f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/components/credentials.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/credentials.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/education.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/education.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="experience.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/experience.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
+            <state relative-caret-position="-42">
               <caret line="2" selection-end-line="2" />
             </state>
           </provider>
@@ -37,8 +38,8 @@
       <file leaf-file-name="credentials.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/credentials.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="28" column="136" selection-start-line="28" selection-start-column="136" selection-end-line="28" selection-end-column="136" />
+            <state relative-caret-position="791">
+              <caret line="52" column="146" selection-start-line="52" selection-start-column="146" selection-end-line="52" selection-end-column="146" />
             </state>
           </provider>
         </entry>
@@ -46,8 +47,8 @@
       <file leaf-file-name="education.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/education.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="28" column="126" selection-start-line="28" selection-start-column="126" selection-end-line="28" selection-end-column="126" />
+            <state relative-caret-position="148">
+              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -82,7 +83,6 @@
         <option value="$PROJECT_DIR$/assets/icons/cancel.svg" />
         <option value="$PROJECT_DIR$/components/index.html" />
         <option value="$PROJECT_DIR$/components/experience.html" />
-        <option value="$PROJECT_DIR$/components/education.html" />
         <option value="$PROJECT_DIR$/assets/icons/up-arrow.svg" />
         <option value="$PROJECT_DIR$/assets/icons/angle-arrow-down.svg" />
         <option value="$PROJECT_DIR$/components/credantials.html" />
@@ -92,6 +92,7 @@
         <option value="$PROJECT_DIR$/custom.css" />
         <option value="$PROJECT_DIR$/styles/scss/custom.scss" />
         <option value="$PROJECT_DIR$/components/profskills.html" />
+        <option value="$PROJECT_DIR$/components/education.html" />
         <option value="$PROJECT_DIR$/components/credentials.html" />
       </list>
     </option>
@@ -202,12 +203,12 @@
       <workItem from="1560190855905" duration="284000" />
       <workItem from="1560192622238" duration="5845000" />
       <workItem from="1560237325687" duration="1494000" />
-      <workItem from="1560247300515" duration="4583000" />
+      <workItem from="1560247300515" duration="4874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45498000" />
+    <option name="totallyTimeSpent" value="45789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -480,13 +481,6 @@
     <entry file="file://$PROJECT_DIR$/assets/icons/angle-arrow-down.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/experience.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -529,15 +523,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/education.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="28" column="126" selection-start-line="28" selection-start-column="126" selection-end-line="28" selection-end-column="126" />
+        <state relative-caret-position="148">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/experience.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/credentials.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="28" column="136" selection-start-line="28" selection-start-column="136" selection-end-line="28" selection-end-column="136" />
+        <state relative-caret-position="791">
+          <caret line="52" column="146" selection-start-line="52" selection-start-column="146" selection-end-line="52" selection-end-column="146" />
         </state>
       </provider>
     </entry>
