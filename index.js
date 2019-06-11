@@ -7,7 +7,8 @@ fetch(`./components/general.html`, {
     .then(resolve => resolve.text())
     .then(result => app.innerHTML = result)
     .then(() => {
-        loader.classList.add('hidden');
+        setTimeout(() =>  loader.classList.add('hidden'), 1000 );
+
     })
     .then(() => {
         const closeMenu = document.querySelector('#close-menu');
@@ -71,7 +72,7 @@ fetch(`./components/general.html`, {
                 .then(resolve => resolve.text())
                 .then(result => app.innerHTML = result)
                 .then(() => {
-                    loader.classList.add('hidden');
+                    setTimeout(() =>  loader.classList.add('hidden'), 1000 );
                     switch (pageName) {
                         case 'credentials' :
                             credentials();

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="49421ab6-835f-4156-9e17-0eae5114368f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/components/credentials.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/credentials.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/education.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/education.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/custom.scss" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+            <state relative-caret-position="331">
+              <caret line="74" column="77" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -29,17 +40,38 @@
       <file leaf-file-name="experience.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/experience.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-42">
-              <caret line="2" selection-end-line="2" />
+            <state relative-caret-position="239">
+              <caret line="28" column="43" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="credentials.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="credentials.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/credentials.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="52" column="146" selection-start-line="52" selection-start-column="146" selection-end-line="52" selection-end-column="146" />
+            <state relative-caret-position="26">
+              <caret line="1" column="24" selection-start-line="1" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profskills.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/profskills.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="52" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="additional.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/additional.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="48" lean-forward="true" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -58,9 +90,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="SCSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -87,13 +119,15 @@
         <option value="$PROJECT_DIR$/assets/icons/angle-arrow-down.svg" />
         <option value="$PROJECT_DIR$/components/credantials.html" />
         <option value="$PROJECT_DIR$/components/general.html" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/custom.css" />
         <option value="$PROJECT_DIR$/styles/scss/custom.scss" />
         <option value="$PROJECT_DIR$/components/profskills.html" />
         <option value="$PROJECT_DIR$/components/education.html" />
+        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/components/credentials.html" />
+        <option value="$PROJECT_DIR$/assets/icons/right-arrow.svg" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/components/additional.html" />
       </list>
     </option>
   </component>
@@ -133,12 +167,13 @@
             <path>
               <item name="talewind" type="b2602c69:ProjectViewProjectNode" />
               <item name="talewind" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="talewind" type="b2602c69:ProjectViewProjectNode" />
               <item name="talewind" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -203,12 +238,12 @@
       <workItem from="1560190855905" duration="284000" />
       <workItem from="1560192622238" duration="5845000" />
       <workItem from="1560237325687" duration="1494000" />
-      <workItem from="1560247300515" duration="4874000" />
+      <workItem from="1560247300515" duration="8708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45789000" />
+    <option name="totallyTimeSpent" value="49623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -475,18 +510,8 @@
     <entry file="file://$PROJECT_DIR$/assets/icons/up-arrow.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/icons/menu.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/icons/angle-arrow-down.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/general.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -509,15 +534,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+        <state relative-caret-position="331">
+          <caret line="74" column="77" selection-start-line="74" selection-start-column="77" selection-end-line="74" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/profskills.html">
+    <entry file="file://$PROJECT_DIR$/components/credentials.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="2" column="180" selection-start-line="2" selection-start-column="180" selection-end-line="2" selection-end-column="180" />
+        <state relative-caret-position="26">
+          <caret line="1" column="24" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/experience.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -528,17 +560,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/experience.html">
+    <entry file="file://$PROJECT_DIR$/components/profskills.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="2" selection-end-line="2" />
+        <state relative-caret-position="78">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/credentials.html">
+    <entry file="file://$PROJECT_DIR$/assets/icons/menu.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/icons/right-arrow.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="52" column="146" selection-start-line="52" selection-start-column="146" selection-end-line="52" selection-end-column="146" />
+        <state relative-caret-position="320">
+          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/additional.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="48" lean-forward="true" selection-end-line="49" />
         </state>
       </provider>
     </entry>
