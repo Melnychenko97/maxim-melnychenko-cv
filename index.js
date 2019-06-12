@@ -1,11 +1,13 @@
 "use strict";
 const loader = $('#loader');
+const address = window.location.origin;
 fetch(`./components/general.html`, {
     method: 'GET',
 })
     .then(resolve => resolve.text())
     .then(result => app.innerHTML = result)
     .then(() => {
+        window.location.href = address + '#general-info';
         setTimeout(() =>  $(loader).fadeOut(400), 800 );
 
     })
@@ -16,6 +18,7 @@ fetch(`./components/general.html`, {
         closeMenu.addEventListener('click', (e) => {
             e.preventDefault();
             mobMenu.classList.remove('hidden');
+            $('#id').show();
         });
 
         const openMenu = document.querySelector('#hamburger');
@@ -23,12 +26,16 @@ fetch(`./components/general.html`, {
         openMenu.addEventListener('click', (e) => {
             e.preventDefault();
             mobMenu.classList.remove('hidden');
+            $('#app').hide();
+            console.log( $('#app'));
         });
 
         closeMenu.addEventListener('click', (e) => {
             e.preventDefault();
             const navigation = document.querySelector('#navigation');
             mobMenu.classList.add('hidden');
+            $('#app').show();
+
         });
 
         mobMenu.addEventListener('click', (e) => {
@@ -38,6 +45,7 @@ fetch(`./components/general.html`, {
                 navItems.forEach( (item) => item.classList.remove('bg-blue-300') );
                 e.currentTarget.classList.add('hidden');
                 const name = e.target.getAttribute('id');
+                $('#app').show();
                 navigateTo(e.target, name);
             }
 
@@ -71,6 +79,7 @@ fetch(`./components/general.html`, {
                 .then(resolve => resolve.text())
                 .then(result => app.innerHTML = result)
                 .then(() => {
+                    window.location.href = address + '#' + pageName;
                     setTimeout(() =>  $(loader).fadeOut(400), 800 );
                     switch (pageName) {
                         case 'credentials' :
@@ -80,7 +89,7 @@ fetch(`./components/general.html`, {
                             null;
                     }
                 })
-                .catch(err => console.log(err));
+                .catch(err => console.error(err));
         }
     })
-    .catch(err => console.log(err));
+    .catch(err => console.error(err));
