@@ -1,14 +1,19 @@
 "use strict";
 const loader = $('#loader');
 const address = window.location.origin;
-fetch(`./components/general.html`, {
+const initialLink = window.location.href;
+const pageId = initialLink.split('/#')[1]; //current page position
+
+fetch( pageId && pageId.length > 0 ? `./components/${pageId}.html` :`./components/general.html`, {
     method: 'GET',
 })
     .then(resolve => resolve.text())
     .then(result => app.innerHTML = result)
     .then(() => {
-        window.location.href = address + '#general-info';
+        const pageName = pageId && pageId.length > 0 ? pageId : 'general';
+        history.pushState( {pageName}, ``, `.#${pageId && pageId.length > 0 ? pageId : 'general'}`);
         setTimeout(() =>  $(loader).fadeOut(400), 800 );
+        $(`#${pageName}`).addClass('bg-blue-300');
 
     })
     .then(() => {
@@ -27,7 +32,6 @@ fetch(`./components/general.html`, {
             e.preventDefault();
             mobMenu.classList.remove('hidden');
             $('#app').hide();
-            console.log( $('#app'));
         });
 
         closeMenu.addEventListener('click', (e) => {
@@ -46,7 +50,7 @@ fetch(`./components/general.html`, {
                 e.currentTarget.classList.add('hidden');
                 const name = e.target.getAttribute('id');
                 $('#app').show();
-                navigateTo(e.target, name);
+                navigateTo(e.target, name, false);
             }
 
         })
@@ -68,10 +72,11 @@ fetch(`./components/general.html`, {
             certificates.addEventListener('click', openList );
         }
 
-        const navigateTo = (pageLink, pageName) => {
+        const navigateTo = ( pageLink , pageName, goBack) => {
+            pageLink = $(pageLink);
             const loader = document.querySelector('#loader');
             $(loader).show();
-            pageLink.classList.add('bg-blue-300');
+            $(pageLink).addClass('bg-blue-300');
             const app = document.querySelector('#app');
             fetch(`./components/${ pageName + '' }.html`, {
                 method: 'GET',
@@ -79,7 +84,7 @@ fetch(`./components/general.html`, {
                 .then(resolve => resolve.text())
                 .then(result => app.innerHTML = result)
                 .then(() => {
-                    window.location.href = address + '#' + pageName;
+                   !goBack ? history.pushState({pageName}, ``, `.#${pageName}`): null;
                     setTimeout(() =>  $(loader).fadeOut(400), 800 );
                     switch (pageName) {
                         case 'credentials' :
@@ -91,5 +96,14 @@ fetch(`./components/general.html`, {
                 })
                 .catch(err => console.error(err));
         }
+
+        window.addEventListener('popstate', e => {
+            if (e.state !== null) {
+                const navItems = document.querySelectorAll('.nav__item');
+                navItems.forEach( (item) => item.classList.remove('bg-blue-300') );
+                navigateTo($(`#${e.state.pageName}`), e.state.pageName, true);
+
+            }
+        })
     })
     .catch(err => console.error(err));
