@@ -99,15 +99,22 @@ fetch( pageId && pageId.length > 0 ? `./components/${pageId}.html` :`./component
 
         });
 
-        mobMenu.addEventListener('click', (e) => {
+        const nav = document.querySelector('nav');
+
+        nav.addEventListener('click', (e) => {
             e.preventDefault();
             if (e.target.classList.contains('nav__item')) {
                 const navItems = document.querySelectorAll('.nav__item');
                 navItems.forEach( (item) => item.classList.remove('bg-blue-300') );
-                e.currentTarget.classList.add('hidden');
-                const name = e.target.getAttribute('id');
+                mobMenu.classList.add('hidden');
+                let name = e.target.getAttribute('id');
+                const nextLink = (name === 'general-name') ? $('#general') : e.target;
+                name === 'general-name' ? name = 'general' : name = name;
+                console.log(name)
+                console.log(nextLink)
+
                 $('#app').show();
-                navigateTo(e.target, name, false);
+                navigateTo(nextLink, name, false);
             }
         })
     })
