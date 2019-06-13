@@ -5,6 +5,7 @@ const initialLink = window.location.href;
 const pageId = initialLink.split('/#')[1]; //current page position
 
 const credentials = () => {
+    bigImgShow();
     const diplomas = document.querySelector('[data-id="diplomas"]');
     const certificates = document.querySelector('[data-id="certificates"]');
 
@@ -20,6 +21,35 @@ const credentials = () => {
     diplomas.addEventListener('click', openList );
     certificates.addEventListener('click', openList );
 }
+
+const bigImgShow = () => {
+    const cards = $('.card');
+    const bigImg = $('#big-size-img');
+    const popup = $('#popup');
+
+    const closeWindow = (e) => {
+        e.stopPropagation();
+        popup.removeClass('opened');
+        $(e.target).hasClass('img-popup') ? null : popup.fadeOut(); $('body').removeClass('overflow-hidden');
+
+
+    }
+    popup.on('click', closeWindow);
+    $(window).on('keydown', (e) => {
+        if(popup.hasClass('opened') && +e.keyCode === 27) {
+            closeWindow(e);
+        }
+    });
+
+    cards.on('click', (e) => {
+       const thumbnail =  $(e.currentTarget).find('.img-small');
+       const src = thumbnail.attr('src');
+       bigImg.attr('src', src);
+       popup.fadeIn();
+       popup.addClass('opened');
+       $('body').addClass('overflow-hidden');
+    });
+};
 
 const navigateTo = ( pageLink , pageName, goBack) => {
     pageLink = $(pageLink);
