@@ -110,8 +110,6 @@ fetch( pageId && pageId.length > 0 ? `./components/${pageId}.html` :`./component
                 let name = e.target.getAttribute('id');
                 const nextLink = (name === 'general-name') ? $('#general') : e.target;
                 name === 'general-name' ? name = 'general' : name = name;
-                console.log(name)
-                console.log(nextLink)
 
                 $('#app').show();
                 navigateTo(nextLink, name, false);
