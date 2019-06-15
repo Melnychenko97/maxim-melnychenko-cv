@@ -52,7 +52,7 @@ const sendEmail = () => {
 
             $.ajax({
                 type: "POST",
-                url: "https://mandrillapp.com/cfb8fb9deaf65df9b5f6206a37b48ffd-us3/1.0/messages/send.json",
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
                 data: dataToSend,
             }).done((response) => {
                console.log(response);
