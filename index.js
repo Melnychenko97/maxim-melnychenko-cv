@@ -22,6 +22,47 @@ const credentials = () => {
     certificates.addEventListener('click', openList );
 }
 
+const sendEmail = () => {
+    const form = $('#contact-me');
+    form.on('submit', (e) => {
+        e.preventDefault();
+        const email = $('#email').val();
+        const subject = !!$('#subject').val() ? $('#subject').val() : 'no-subject';
+        const message = $('#text').val();
+
+        if (email && message) {
+            const gatheredInfo = {
+                'key': 'cfb8fb9deaf65df9b5f6206a37b48ffd-us3',
+                'message': {
+                    'from_email': email,
+                    'to': [
+                        {
+                            'email': 'ivmel.ca@gmail.com',
+                            'name': 'Maxym Melnychenko',
+                            'type': 'to',
+                        }
+                    ],
+                    "autotext": "true",
+                    "subject": subject,
+                    "html": message,
+                }
+            }
+
+            const dataToSend = JSON.stringify(gatheredInfo);
+
+            $.ajax({
+                type: "POST",
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                data: dataToSend,
+            }).done((response) => {
+               console.log(response);
+            });
+        }
+    });
+}
+
+sendEmail();
+
 const bigImgShow = () => {
     const cards = $('.card');
     const bigImg = $('#big-size-img');
