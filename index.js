@@ -31,31 +31,28 @@ const sendEmail = () => {
         const message = $('#text').val();
 
         if (email && message) {
-            const gatheredInfo = {
-                'key': 'cfb8fb9deaf65df9b5f6206a37b48ffd-us3',
-                'message': {
-                    'from_email': email,
-                    'to': [
-                        {
-                            'email': 'ivmel.ca@gmail.com',
-                            'name': 'Maxym Melnychenko',
-                            'type': 'to',
-                        }
-                    ],
-                    "autotext": "true",
-                    "subject": subject,
-                    "html": message,
-                }
-            }
+            const data = {
+                service_id: 'default_service',
+                template_id: 'template_e470zxP5',
+                user_id: 'user_A4WnZYYAqTDJA8jlpyLWX',
+                template_params: {
+                    name: 'CV Melnychenko',
+                    message_html: message,
+                    to_name: 'Maxim Melnychenko',
+                    reply_email: email,
+                    from_name: email,
+                    subject: subject,
+                },
+            };
 
-            const dataToSend = JSON.stringify(gatheredInfo);
-
-            $.ajax({
-                type: "POST",
-                url: "https://mandrillapp.com/cfb8fb9deaf65df9b5f6206a37b48ffd-us3/1.0/messages/send.json",
-                data: dataToSend,
-            }).done((response) => {
-               console.log(response);
+            $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                type: 'POST',
+                data: JSON.stringify(data),
+                contentType: 'application/json'
+            }).done(function() {
+                console.log('Your mail is sent!');
+            }).fail(function(error) {
+                console.log('Oops... ' + JSON.stringify(error));
             });
         }
     });
