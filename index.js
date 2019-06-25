@@ -48,11 +48,21 @@ const sendEmail = () => {
             $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
                 type: 'POST',
                 data: JSON.stringify(data),
-                contentType: 'application/json'
+                contentType: 'application/json',
+                beforeSend: () => {
+                    $('#contact-me').removeClass('opacity-1');
+                    $('#contact-me').addClass('opacity-25');
+                    $('#curtain').fadeIn();
+                }
             }).done(function() {
                 console.log('Your mail is sent!');
+                $('#success').fadeIn().delay(1000).fadeOut(600);
+                $('#contact-me').removeClass('opacity-25');
+                $('#contact-me').addClass('opacity-1');
+                $('#curtain').fadeOut();
             }).fail(function(error) {
                 console.log('Oops... ' + JSON.stringify(error));
+                $('#error').fadeIn().delay(1000).fadeOut(600);
             });
         }
     });

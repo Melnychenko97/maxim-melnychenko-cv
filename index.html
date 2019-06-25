@@ -76,22 +76,32 @@
         </section>
 		<section class="pb-24">
             <h2 class="w-full px-5 mb-5 sm:mb-0 sm:my-10 text-center uppercase text-blue-800 font-bold text-xl tracking-wider">Contact Me</h2>
-            <form id="contact-me" class="flex flex-col mx-auto w-full my-10 max-w-2xl items-center">
-                <label class=" w-full serif text-blue-800 pt-4 pb-2" for="email">
-                    Type your email to help me contact you back*
-                </label>
-                <input class="w-full p-4 border rounded border-gray-400" type="text" id="email" required>
-                <label class="w-full serif text-blue-800 pt-4 pb-2" for="subject">
-                    What are you interested in?
-                </label>
-                <input class="w-full p-4 border rounded border-gray-400" type="text" id="subject">
-                <label class=" w-full serif text-blue-800 pt-4 pb-2" for="text">
-                    Please, feel free to type me your questions*
-                </label>
-                <textarea class="w-full h-32 p-4 border rounded border-gray-400 border-solid border-b-2" id="text" required></textarea>
+            <div class="w-full h-auto relative">
+                <form id="contact-me" class=" px-5 flex flex-col mx-auto w-full my-10 max-w-2xl items-center">
+                    <label class=" w-full serif text-blue-800 pt-4 pb-2" for="email">
+                        Type your email to help me contact you back*
+                    </label>
+                    <input class="w-full p-4 border rounded border-gray-400" type="text" id="email" required>
+                    <label class="w-full serif text-blue-800 pt-4 pb-2" for="subject">
+                        What are you interested in?
+                    </label>
+                    <input class="w-full p-4 border rounded border-gray-400" type="text" id="subject">
+                    <label class=" w-full serif text-blue-800 pt-4 pb-2" for="text">
+                        Please, feel free to type me your questions*
+                    </label>
+                    <textarea class="w-full h-32 p-4 border rounded border-gray-400 border-solid border-b-2" id="text" required></textarea>
 
-                <button id="send-email" type="submit" class="focus:outline-none active:outline-none target:outline-none cursor-pointer w-full lg:hover:bg-blue-800 lg:hover:text-white w-full mt-8 max-w-xs p-4 border rounded border-gray-400 border-solid border-b-2">Send</button>
-            </form>
+                    <button id="send-email" type="submit" class="mb-5 md:hover:bg-blue-400 hover:border-none active:border-none md:hover:text-white focus:outline-none active:outline-none target:outline-none cursor-pointer w-full lg:hover:bg-blue-800 lg:hover:text-white w-full mt-8 max-w-xs p-4 border rounded border-gray-400 border-solid border-b-2 md:active:bg-blue-800">Send</button>
+                    <p id="success" class="hidden text-center text-green-400">Your mail's been successfully sent!</p>
+                    <p id="error" class="hidden text-center text-red-400">Oops...Something's gone wrong, please try again later...</p>
+                </form>
+                <div id="curtain" class="hidden  w-full h-full absolute top-0 left-0">
+                    <div class=" w-full h-full flex flex-col items-center justify-center">
+                        <p class="text-lg ">Please, wait...</p>
+                        <img src="assets/gear.gif" alt="page is loading now" class=" w-20  h-auto">
+                    </div>
+                </div>
+            </div>
         </section>
 	</section>
     <div id="loader" class=" bg-white fixed w-screen h-screen z-30 top-0 left-0 flex items-center justify-center">
